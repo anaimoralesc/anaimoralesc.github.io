@@ -552,14 +552,17 @@ nav {
 }
 
 /* ── BACKGROUND ZONES (case study sections) ─────────────────────────────── */
+/* Image guide: 1920 × 900 px min, landscape. PNG or JPG. Max ~600 KB.
+   To shift focus point, add inline style: style="--zone-bg:url('x.png'); background-position: center 30%" */
 .cs-bg-zone {
   position: relative;
   margin: 0 -2.5rem;
   padding: 0.25rem 2.5rem;
   background-image: var(--zone-bg, none);
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   background-repeat: no-repeat;
+  background-attachment: local;
 }
 .cs-bg-zone::before {
   content: '';
