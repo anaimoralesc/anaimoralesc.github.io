@@ -572,6 +572,31 @@ nav {
   .cs-hero-img img { height: 240px; }
 }
 
+/* ── IMAGE TRIO (3-panel full-bleed grid, used in Corona and similar cases) ─ */
+.cs-img-trio {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 520px;
+  gap: 3px;
+  margin: 2.5rem 0;
+  overflow: hidden;
+}
+.cs-img-trio img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+@media (max-width: 640px) {
+  .cs-img-trio { grid-template-columns: 1fr; height: auto; gap: 2px; }
+  .cs-img-trio img { height: 280px; }
+}
+
 /* ── BACKGROUND ZONES (case study sections) ─────────────────────────────── */
 /* Image guide: 1920 × 900 px min, landscape. PNG or JPG. Max ~600 KB.
    To shift focus point override inline: style="--zone-bg:url('x.png'); background-position: center 30%" */
