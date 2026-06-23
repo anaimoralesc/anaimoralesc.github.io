@@ -572,6 +572,21 @@ nav {
   .cs-hero-img img { height: 240px; }
 }
 
+/* ── PRESS / EARNED MEDIA WALL (full-bleed logo grid image) ─────────────── */
+.cs-press-wall {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 2.5rem 0 0;
+  overflow: hidden;
+}
+.cs-press-wall img {
+  width: 100%;
+  height: auto;       /* preserves full image, no cropping */
+  display: block;
+}
+
 /* ── IMAGE TRIO (3-panel full-bleed grid, used in Corona and similar cases) ─ */
 .cs-img-trio {
   width: 100vw;
