@@ -930,6 +930,78 @@ nav {
 
 .contact-cta { margin-top: 2.5rem; }
 
+/* ── BRAND LOGO STRIP ───────────────────────────────────────────────────── */
+.brands-strip {
+  background: var(--warm);
+  border-top: 1px solid var(--border);
+  padding: 3.5rem 2.5rem;
+  text-align: center;
+}
+
+.brands-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gray);
+  font-weight: 500;
+  margin-bottom: 2.25rem;
+}
+
+.brands-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem 3.5rem;
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+/* Light-bg logos — multiply removes white background on cream */
+.brand-logo--light img {
+  height: 44px;
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
+  display: block;
+  opacity: 0.72;
+  mix-blend-mode: multiply;
+  transition: opacity 0.2s ease;
+}
+.brand-logo--light img:hover { opacity: 1; }
+
+/* Dark-bg logos — navy pill so black backdrop looks intentional */
+.brand-logo--dark {
+  background: var(--navy);
+  border-radius: 8px;
+  padding: 0.6rem 1.25rem;
+}
+.brand-logo--dark img {
+  height: 44px;
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
+  display: block;
+  opacity: 0.8;
+  mix-blend-mode: screen;
+  transition: opacity 0.2s ease;
+}
+.brand-logo--dark img:hover { opacity: 1; }
+
+@media (max-width: 768px) {
+  .brands-strip { padding: 2.5rem 1.25rem; }
+  .brands-grid { gap: 1.5rem 2.5rem; }
+  .brand-logo--light img,
+  .brand-logo--dark img { height: 36px; max-width: 120px; }
+}
+
 /* ── FOOTER ─────────────────────────────────────────────────────────────── */
 footer {
   background: var(--navy);
