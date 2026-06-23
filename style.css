@@ -964,42 +964,28 @@ nav {
   list-style: none;
 }
 
-/* Light-bg logos — multiply removes white background on cream */
-.brand-logo--light img {
+/* Uniform single-color treatment for all logos:
+   grayscale → darken → boost contrast → multiply removes white bg on cream */
+.brand-logo img {
   height: 44px;
   width: auto;
   max-width: 160px;
   object-fit: contain;
   display: block;
-  opacity: 0.72;
+  filter: grayscale(1) brightness(0.65) contrast(1.6);
   mix-blend-mode: multiply;
-  transition: opacity 0.2s ease;
+  opacity: 0.82;
+  transition: opacity 0.2s ease, filter 0.2s ease;
 }
-.brand-logo--light img:hover { opacity: 1; }
-
-/* Dark-bg logos — navy pill so black backdrop looks intentional */
-.brand-logo--dark {
-  background: var(--navy);
-  border-radius: 8px;
-  padding: 0.6rem 1.25rem;
+.brand-logo img:hover {
+  opacity: 1;
+  filter: grayscale(1) brightness(0.55) contrast(1.8);
 }
-.brand-logo--dark img {
-  height: 44px;
-  width: auto;
-  max-width: 160px;
-  object-fit: contain;
-  display: block;
-  opacity: 0.8;
-  mix-blend-mode: screen;
-  transition: opacity 0.2s ease;
-}
-.brand-logo--dark img:hover { opacity: 1; }
 
 @media (max-width: 768px) {
   .brands-strip { padding: 2.5rem 1.25rem; }
   .brands-grid { gap: 1.5rem 2.5rem; }
-  .brand-logo--light img,
-  .brand-logo--dark img { height: 36px; max-width: 120px; }
+  .brand-logo img { height: 36px; max-width: 120px; }
 }
 
 /* ── FOOTER ─────────────────────────────────────────────────────────────── */
